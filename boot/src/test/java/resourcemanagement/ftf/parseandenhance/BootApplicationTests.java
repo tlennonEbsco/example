@@ -1,4 +1,4 @@
-package com.boot;
+package resourcemanagement.ftf.parseandenhance;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

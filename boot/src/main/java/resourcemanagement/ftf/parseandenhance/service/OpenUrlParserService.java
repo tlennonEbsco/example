@@ -1,6 +1,6 @@
-package com.boot.service;
+package resourcemanagement.ftf.parseandenhance.service;
 
-import com.boot.resource.OpenUrl;
+import resourcemanagement.ftf.parseandenhance.resource.OpenUrl;
 
 import java.util.Map;
 

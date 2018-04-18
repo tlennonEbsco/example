@@ -1,7 +1,7 @@
-package com.boot.controller;
+package resourcemanagement.ftf.parseandenhance.controller;
 
-import com.boot.resource.OpenUrl;
-import com.boot.service.OpenUrlParserService;
+import resourcemanagement.ftf.parseandenhance.resource.OpenUrl;
+import resourcemanagement.ftf.parseandenhance.service.OpenUrlParserService;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,9 +14,9 @@ import java.util.Map;
 
 @Controller
 @EnableAutoConfiguration
-public class HomeController {
-
+public class OpenUrlParserController {
     private OpenUrlParserService openUrlParser = new OpenUrlParserService();
+
 
     @RequestMapping(value = {"/openurl"}, method = RequestMethod.GET)
     @ResponseBody
@@ -24,5 +24,4 @@ public class HomeController {
             @RequestParam Map<String, String> openUrl) {
         return openUrlParser.parse(openUrl);
     }
-
 }

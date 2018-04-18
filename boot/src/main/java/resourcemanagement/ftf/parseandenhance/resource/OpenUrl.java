@@ -1,4 +1,4 @@
-package com.boot.resource;
+package resourcemanagement.ftf.parseandenhance.resource;
 
 import java.util.Map;
 import java.util.UUID;

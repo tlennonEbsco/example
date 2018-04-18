@@ -1,22 +1,28 @@
 package com.boot.controller;
 
+import com.boot.resource.OpenUrl;
+import com.boot.service.OpenUrlParserService;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.Map;
 
 
 @Controller
 @EnableAutoConfiguration
 public class HomeController {
 
-    @RequestMapping(value = {"/openurl/{openUrl}"}, method = RequestMethod.GET)
+    private OpenUrlParserService openUrlParser = new OpenUrlParserService();
+
+    @RequestMapping(value = {"/openurl"}, method = RequestMethod.GET)
     @ResponseBody
-    public String search(
-            @PathVariable("openUrl") String openUrl) {
-        return openUrl;
+    public OpenUrl search(
+            @RequestParam Map<String, String> openUrl) {
+        return openUrlParser.parse(openUrl);
     }
 
 }

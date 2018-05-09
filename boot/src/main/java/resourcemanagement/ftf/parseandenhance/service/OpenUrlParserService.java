@@ -1,13 +1,13 @@
 package resourcemanagement.ftf.parseandenhance.service;
 
-import resourcemanagement.ftf.parseandenhance.resource.OpenUrl;
+import resourcemanagement.ftf.parseandenhance.resource.OpenUrlParserResponse;
 
 import java.util.Map;
 
 public class OpenUrlParserService {
-    public OpenUrl parse(Map<String, String> preParsedMap) {
+    public OpenUrlParserResponse parse(Map<String, String> preParsedMap) {
         parseOutAdditionalValues(preParsedMap);
-        return new OpenUrl(preParsedMap);
+        return new OpenUrlParserResponse(preParsedMap);
     }
 
 

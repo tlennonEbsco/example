@@ -4,15 +4,15 @@ import java.util.Map;
 import java.util.UUID;
 
 /***
- * Represents a parsed OpenUrl class.
+ * Represents a parsed OpenUrlParserResponse class.
  *
  * The id is for any and all logging operations.
  */
-public class OpenUrl {
+public class OpenUrlParserResponse {
     private UUID _id;
     private Map<String, String> _facts;
 
-    public OpenUrl(Map<String, String> facts) {
+    public OpenUrlParserResponse(Map<String, String> facts) {
         _id = UUID.randomUUID();
         this._facts = facts;
     }
